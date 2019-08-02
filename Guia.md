@@ -105,3 +105,44 @@ se crea el componente y se agrega
 <app-menu></app-menu>
 <router-outlet></router-outlet>
 ```
+
+## ¿Cómo usar tipos de datos con TypeScript?
+
+TypeScript debe su nombre a los tipos de datos (types en inglés). JavaScript no es un lenguaje de programación tipado, por lo que es requerida en su sintaxis la definición de un tipo de dato al momento de instanciar las clases o variables en general. El uso de tipos explícitos en la programación permite a fin de cuentas un mejor aprovechamiento del recurso de memoria, entre muchos otros beneficios.
+
+Los tipos básicos (built-in y definidos por el usuario) admitidos por TypeScript son: Boolean, Number, String, Array, Tuple, Enum, Void, Null y Undefined, y el tipo que es la base de todos los anteriores: Any, que básicamente representa cualquier cosa.
+
+Los tipos de datos avanzados de Type
+Script incluyen: Function, Object, Interface, Guard, Union, entre otros.
+
+## Qué son las interfaces de TypeScript y su implementación
+
+Los tipos de datos Interfaces de TypScript, son muy parecidos a una clase, en la que se definen propiedades internas que pueden ser de cualquiera de los otros tipos. Estas propiedades internas pueden definirse como obligatorias u opcionales usando el símbolo “”?"". Las interfaces definen en cierto modo estructuras personalizadas de datos en las que lo principal es que al ser implementadas usando ciertas IDEs (como Webstorm), muestran mensajes de control y validación para asegurar el uso adecuado de dicha interface, en tiempo real durante el desarrollo.
+
+La forma de declarar una interface se puede ver en el siguiente ejemplo:
+
+```javascript
+export interface User {
+  nick: string,
+  subnick?: string,
+  age?: number,
+  email: string,
+  friend: boolean,
+  uid: any
+}
+```
+
+## NgFor aplicado en la lista de usuarios
+
+NgFor es una directiva estructural que afecta (agrega, modifica o elimina) un elemento HTML. Las directivas estructurales las identificamos porque llevan un * antes de la directiva, por ejemplo: `*ngFor`
+
+NgFor nos permite recorrer un arreglo de datos y por cada elemento generar o imprimir en el DOM un elemento HTML nuevo, con algún valor cambiado basado en el elemento leído del arreglo.
+
+## NgIf aplicado en la lista de usuarios
+
+NgIF es una directiva estructural de Angular que evalúa un valor o una expresión buleana, en función de la cual se mostrará o no, un elemento HTML. El elemento se mostrará sólo cuando la condición sea verdadera (true).
+
+## Navegación con parámetros
+
+Al navegar entre pantallas, hay ocasiones en las que es necesario pasar datos particulares. Usando routerLink podemos incluir parámetros de manera similar a como lo hacemos con subdominios o subdirectorios. Para recibir e interpretar estos parámetros correctamente es necesario definir las rutas específicas en appRoutes y consultarlos luego en el componente con el objeto ActivatedRoute.
+
