@@ -146,3 +146,52 @@ NgIF es una directiva estructural de Angular que evalúa un valor o una expresi�
 
 Al navegar entre pantallas, hay ocasiones en las que es necesario pasar datos particulares. Usando routerLink podemos incluir parámetros de manera similar a como lo hacemos con subdominios o subdirectorios. Para recibir e interpretar estos parámetros correctamente es necesario definir las rutas específicas en appRoutes y consultarlos luego en el componente con el objeto ActivatedRoute.
 
+
+## Creando un servicio de usuarios e Inyectando el servicio en nuestros componentes
+
+Un servicio es una clase que puede ser inyectada en uno o varios componentes y que es muy útil para compartir datos o funciones entre éstos, evitando la duplicidad de código.
+
+Se crean a través del Angular CLI con el siguiente comando:
+
+```javascript
+ng generate service <directorio>/<nombre del servicio>
+```
+
+Al ejecutar este comando se generan en nuestro proyecto los siguientes archivos:
+
+```javascript
+/<directorio>
+  <nombre del servicio>.service.spec.ts
+  <nombre del servicio>.service.ts
+```
+
+Luego en el componente, inyectamos el Servicio de manera similar a cómo inyectamos el ActivatedRoute.
+
+## Pipes en Angular (date, number, json)
+
+Los pipes en angular, son elementos que se pueden incluir en el HTML y nos permiten aplicar transformaciones a los datos antes de mostrarlos.
+
+Algunos de los pipes más usados son:
+
+-json
+-number: `‘<formato-decimal>’`
+-date: `‘<formato de fecha>’`
+
+Puedes consultar más formatos en la documentación oficial de Angular - [Pipes](https://angular.io/guide/pipes/).
+
+## Creando nuestro propio pipe para buscar entre nuestros contactos
+
+Para crear un pipe personalizado debemos crear un archivo de TypeScript e importar las clases Pipe y PipeTransform desde @angular/core.
+
+```javascript
+import {Pipe, PipeTransform} from '@angular/core';
+
+@Pipe ({
+  name: 'nombre-del-pipe' // --- este es el nombre con que se implementa en el html
+})
+export class MiCustomPipe implements PipeTransform {
+  public transform ( value, args: string ) {
+     return <valor transformado>
+  }
+}
+```
