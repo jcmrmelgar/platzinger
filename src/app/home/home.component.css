@@ -13,6 +13,13 @@
     background-color: rgba(255,255,255,.50);
 }
 
+<<<<<<< HEAD
+=======
+#homeAvatarPicture{
+    max-width: 100px;    
+}
+
+>>>>>>> 08704d2b66fd243e2ad44d87de7c1203a23be5ab
 .whiteContainerpadded{
     padding: 15px;
     background-color: #feffff;    
