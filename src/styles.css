@@ -27,6 +27,10 @@
     margin-bottom: 15px;
 }
 
+.generalContent{
+    margin-top: 56px;
+}
+
 .btn{
     background: rgba(242,246,248,1);
     background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);

@@ -12,8 +12,8 @@
                 <div class="center">
                     <h3>Iniciar sesion</h3>
                 </div>
-                <p *ngIf="operation == 'register'">Ya tienes cuenta? Has <a (click)="operation='login'">Login</a></p>
-                <p *ngIf="operation == 'login'">NO tienes cuenta? <a (click)="operation='register'">Registrarse</a></p>
+                <p *ngIf="operation == 'register'">Ya tienes cuenta? Has <a (click)="operation='login'" class="text-warning stretched-link" >Login</a></p>
+                <p *ngIf="operation == 'login'">NO tienes cuenta? <a (click)="operation='register'" class="text-warning stretched-link">Registrarse</a></p>
                 <div class="boreredContainer">
                     <input class="form-control marbo15" type="email" placeholder="Ingrese Email">
                     <input class="form-control marbo15" type="password" placeholder="Ingrese Contrasenna">
