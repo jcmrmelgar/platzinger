@@ -195,3 +195,26 @@ export class MiCustomPipe implements PipeTransform {
   }
 }
 ```
+
+## ¿Cómo usar estilos CSS y referenciar recursos?
+
+Para ir definiendo los estilos CSS que vas a aplicar en tu componente, puedes ir probando primero en el inspector del navegador e ir viendo los resultados en tiempo real, y cuando ya tengas todos los estilos definidos, puedes cortarlos y pegarlos en los archvos CSS del proyecto.
+
+## Instalando librerías usando npm (bootstrap y font-awesome) y Referenciando CSS en el angular.json
+
+Se recomienda instalar los paquetes con versiones exactas para evitar incompatibilidades con versiones futuras de las librerías.
+
+`npm install bootstrap --save-exact`
+`npm install @fortawesome/fontawesome-free --save-exact`
+
+Luego de instalados los paquetes con npm, la implementación se hace importando las librerías en la sección styles del archivo angular.json
+
+```javascript
+...
+  ""styles"": [
+    ""node_modules/bootstrap/dist/css/bootstrap.css"",
+    ""node_modules/@fortawesome/fontawesome-free/css/all.css"",
+    ""src/styles.css""
+  ]
+...
+```
