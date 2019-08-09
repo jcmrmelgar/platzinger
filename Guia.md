@@ -218,3 +218,16 @@ Luego de instalados los paquetes con npm, la implementación se hace importando 
   ]
 ...
 ```
+
+## Usando ngClass para añadir estilos dinámicos
+
+NgClass es una directiva que te permite aplicar una u otra clase a un elemento de html, dependiendo de una condición o expresión buleana.
+La forma de implementar NgClass es la siguiente:
+
+```javascript
+ <div [ngClass] = ""{ '<nombre-de-la-clase': <expresión buleana> }"">
+    <!-- -->
+  </div>
+  ```
+
+La clase indicada se aplicará al elemento cuando la expresión buleana sea verdadera.
