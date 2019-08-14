@@ -230,4 +230,17 @@ La forma de implementar NgClass es la siguiente:
   </div>
   ```
 
-La clase indicada se aplicará al elemento cuando la expresión buleana sea verdadera.
+La clase indicada se aplicará al elemento cuando la expresión buleana sea. 
+
+## Firebase
+
+es un servicio de backend ofrecido por Google de manera gratuita. Provee entre sus utilidades, una base de datos remota más parecida a Mongo que SQL ya que es del tipo no-relacional.
+
+Para implementar este servicio es necesario acceder a la consola de Firebase con una cuenta Google, y seguir las instrucciones de implementación en la sección Base de Datos en Tiempo Real.
+
+## Instalación
+
+Para conectar nuestro proyecto a los servicios de Firebase, usamos AngularFire, disponible en los repositorios de paquetes de npm. Al crear un proyecto en Firebase se nos muestran varias opciones de configuración. La opción de configuración web es la que vamos a utilizar, al obtener los datos y credenciales de autenticación las copiamos en el archivo environment.ts y en environment.prod.ts para que estén disponibles tanto en el ambiente de desarrollo como en producción.
+
+Una vez creadas las variables de configuración será necesario importar los módulos AngularFireModule y environment en app.modules.ts. Finalmente incluímos las clases de Firebase que usaremos en nuestro proyecto en la sección imports: AngularFireAuthModule, AngularFireStorageModule y AngularFireDatabaseModule.
+
