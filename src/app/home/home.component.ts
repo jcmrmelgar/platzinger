@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   friends : User[];
   query: string = '';
+  user : User;
   constructor(private userService: UserService, private authenticationService: AuthenticationService, private router: Router) {    
     userService.getUsers().valueChanges().subscribe(
       (data: User[]) => {
@@ -19,7 +20,18 @@ export class HomeComponent implements OnInit {
       }, (error) => {
         console.log(error);
       }
-    )
+    );
+
+    this.authenticationService.getStatus().subscribe((status) => {
+      this.userService.getUserById(status.uid).valueChanges().subscribe((data: User) => {
+        this.user = data;
+        console.log(this.user);
+      }, (error) => {
+        console.log(error);
+      });
+    }, (error) => {
+      console.log(error);
+    });
   }
 
   ngOnInit() {

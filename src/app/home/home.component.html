@@ -9,13 +9,13 @@
                         <img src="assets/img/generic_avatar.png" id="homeAvatarPicture">
                     </div>
                 </div>
-                <div class="col">
-                        <b>Eduardo</b>
+                <div class="col" *ngIf="user">
+                        <b>{{user.nick}}</b>
                         <div>
-                          <span>Online</span>
+                          <span>{{user.status}}</span>
                           <br />
-                          <span>< Escribe un mensaje Personal ></span><br />
-                          <a (click)="logout()">Logout</a>
+                          <span>{{user.email}}</span><br />
+                          <b><a (click)="logout()">Logout</a></b>
                         </div>
                 </div>
             </div>
