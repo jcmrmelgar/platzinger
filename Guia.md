@@ -244,3 +244,15 @@ Para conectar nuestro proyecto a los servicios de Firebase, usamos AngularFire, 
 
 Una vez creadas las variables de configuración será necesario importar los módulos AngularFireModule y environment en app.modules.ts. Finalmente incluímos las clases de Firebase que usaremos en nuestro proyecto en la sección imports: AngularFireAuthModule, AngularFireStorageModule y AngularFireDatabaseModule.
 
+## Guards para verificar Firebase auth
+
+Los guards son scripts que implementan una estrategia de seguridad para accesos no autorizados a las deferentes rutas de nuestra aplicación. Se crean de manera similar a los servicios y componentes, con el siguiente comando de AngularCLI:
+
+```javascript
+ng generate guard <directorio>/<nombre-del-guard>
+```
+
+Resultando en la creación de los archivos: ```<nombre-del-guard>.specs.guard.ts y <nombre-del-guard>.guard.ts```
+
+El guard se basa en un atributo llamado canActivate que, dependiendo de una condición o expresión buleana, retornará verdadero o falso al constructor del componente en el que se haya inyectado para indicarle cuando deberá mostrar o no el contenido de dicho componente.
+

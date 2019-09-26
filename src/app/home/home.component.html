@@ -1,4 +1,5 @@
 
+<app-menu *ngIf="router.url !='/login'"></app-menu>
 <div id="homeContainer">
     <div class="whiteBorderGlassBox">
         <div class="homeHeadContainer">
@@ -13,7 +14,8 @@
                         <div>
                           <span>Online</span>
                           <br />
-                          <span>< Escribe un mensaje Personal ></span>
+                          <span>< Escribe un mensaje Personal ></span><br />
+                          <a (click)="logout()">Logout</a>
                         </div>
                 </div>
             </div>

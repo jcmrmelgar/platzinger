@@ -33,9 +33,7 @@ export class LoginComponent implements OnInit {
         alert('Ocurrioo un error');
         console.log(error);
       } );
-
-      alert('Registrado correctamente');
-      console.log(data);
+   
     }).catch((error) => {
       alert('Ocurrioo un error');
       console.log(error);
