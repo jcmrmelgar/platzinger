@@ -5,8 +5,8 @@
         <div class="homeHeadContainer">
             <div class="row">
                 <div class="col-md-auto">
-                    <div class="avatarFrameoffline">
-                        <img src="assets/img/generic_avatar.png" id="homeAvatarPicture">
+                    <div class="avatarFrameoffline" *ngIf="user">
+                        <img [src]="user.avatar || 'assets/img/generic_avatar.png'" id="homeAvatarPicture">
                     </div>
                 </div>
                 <div class="col" *ngIf="user">
