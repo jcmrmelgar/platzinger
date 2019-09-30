@@ -28,8 +28,7 @@
                         </div>
                         
                         <div class="bottomChat">
-                            <input type="area" class="form-control areaChat" placeholder="Escribe un mensaje" name="">
-                            
+                                <textarea [(ngModel)]="textMessage" (keyup.enter)="sendMessage()" class="form-control" cols="30" rows="5" ></textarea>
                             <div class="marto15">
     
                                 <img src="assets/img/zumbido.png" class="iconImage img-fluid">
